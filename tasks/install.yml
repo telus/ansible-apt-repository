@@ -34,7 +34,4 @@
   apt_repository:
     state: present
     repo: "{{ repository_url | mandatory }}"
-  notify: Update Package Cache
-
-- name: Trigger All Callbacks
-  meta: flush_handlers
+    update_cache: yes
